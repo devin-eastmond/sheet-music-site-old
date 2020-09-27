@@ -1,0 +1,100 @@
+header {
+  height: 75px;
+  background-color: rgb(0, 111, 139);
+  justify-content: center;
+  display: table;
+  width: 100%;
+  padding: 20px;
+}
+
+header h1 {
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+
+.rectangle {
+  margin: auto;
+  width: 100%;
+  padding: 75px 5px;
+  text-align: center;
+  position: relative;
+}
+
+.rectangle h1, h2, h3, h4, h5, h6 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.rectangle div {
+  margin: 20px 5px;
+}
+
+.rectangle button {
+  margin: 20px 50px;
+}
+
+#pianoImage {
+  width: 300px;
+  background-color: transparent;
+  position: absolute;
+  left: 5px;
+  top: -45px;
+}
+
+#sheetMusicImage {
+  width: 300px;
+  background-color: transparent;
+  position: absolute;
+  right: 5px;
+  top: -45px;
+}
+
+.rectangle-white h2 {
+  color: rgb(0, 111, 139);
+}
+
+.rectangle-white button {
+  background-color: rgb(0, 111, 139);
+}
+
+.rectangle-blue {
+  background-color: rgb(0, 139, 137);
+}
+
+.rectangle-blue h2 {
+  color: white;
+}
+
+.rectangle-blue button {
+  background-color: white;
+  color: rgb(0, 139, 137);
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: rgb(0, 29, 38);
+}
+
+.footer span {
+  color: rgb(89, 89, 89);
+}
+
+.jumbotron {
+  color: white;
+  background-color: rgb(0, 139, 137);
+}
