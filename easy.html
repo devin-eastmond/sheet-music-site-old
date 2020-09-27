@@ -23,10 +23,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item active">
           <a class="nav-link" href="browseMusic.html">Browse Music</a>
         </li>
         <li class="nav-item dropdown">
@@ -61,32 +61,51 @@
   </nav>
   <!-- NAVBAR END -->
 
-  <img class="hero-image" src="images/pianoSheetMusic.JPG">
-
-  <div class="rectangle rectangle-white">
-    <h2>10+ free piano arrangements in the genre of your choice</h2>
-    <div>
-      <button type="button" class="btn btn-info btn-lg" onclick="window.location.href='movieMusic.html';">Movie Music</button>
-      <button type="button" class="btn btn-info btn-lg" onclick="window.location.href='videoGameSoundtracks.html';">Video Game Soundtracks</button>
-      <button type="button" class="btn btn-info btn-lg" onclick="window.location.href='religiousMusic.html';">Religious Music</button>
-    </div>
+  <div class="jumbotron">
+    <h1>Browse Music</h1>
   </div>
 
-  <div class="rectangle rectangle-blue">
-    <h2>Play according to your difficulty level</h2>
-    <img src="images/piano.png" id="pianoImage">
-    <div>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="window.location.href='easy.html';">Easy</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="window.location.href='intermediate.html';">Intermediate</button>
-      <button type="button" class="btn btn-outline-info btn-lg" onclick="window.location.href='advanced.html';">Advanced</button>
-    </div>
-  </div>
+  <h1 class="page-header">Easy Piano Music</h1>
 
-  <div class="rectangle rectangle-white">
-    <h2>Easily download and print your sheet music, <br>or pull it up on your iPad or tablet and <br>play it from there</h2>
-    <img src="images/sheetMusic.png" id="sheetMusicImage">
-    <div>
-      <button type="button" class="btn btn-info btn-lg" onclick="window.location.href='browseMusic.html';">Download Sheet Music</button>
+  <div class="container">
+    <div class="row">
+
+      <div id="mdb-lightbox-ui"></div>
+
+      <figure class="col-md-4">
+        <a href="images/Harry_&_Hermione.pdf" data-size="1600x1067">
+          <div class="sheet-info">
+            <img alt="picture" src="images/Harry_&_Hermione.pdf" class="img-thumbnail" />
+            <h5>Harry &amp; Hermione</h5>
+            <p>Easy Piano</p>
+            <p>Composed by Nicholas Hooper</p>
+          </div>
+        </a>
+      </figure>
+
+      <figure class="col-md-4">
+        <a href="images/Married_Life.pdf" data-size="1600x1067">
+          <div class="sheet-info">
+            <img alt="picture" src="images/Married_Life.pdf" class="img-thumbnail" />
+            <h5>Married Life</h5>
+            <p>Easy Piano</p>
+            <p>Composed by Michael Giacchino</p>
+          </div>
+        </a>
+      </figure>
+
+      <figure class="col-md-4">
+        <a href="images/Whistle_While_You_Work.pdf" data-size="1600x1067">
+          <div class="sheet-info">
+            <img alt="picture" src="images/Whistle_While_You_Work.pdf" class="img-thumbnail" />
+            <h5>Whisle While You Work</h5>
+            <p>Easy Piano</p>
+            <p>Composed by Frank Churchill</p>
+          </div>
+        </a>
+      </figure>
+
+
     </div>
   </div>
 
