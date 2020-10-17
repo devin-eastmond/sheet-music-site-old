@@ -196,7 +196,8 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
 }
 
 .rectangle-blue img {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-radius: 50%;
 }
 
 .rectangle-blue p {
