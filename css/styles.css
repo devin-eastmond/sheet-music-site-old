@@ -223,6 +223,10 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
   margin: 35px 0;
 }
 
+.form-block label {
+  color: rgb(0, 111, 139);
+}
+
 .footer {
   bottom: 0;
   width: 100%;
@@ -239,6 +243,8 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
 .jumbotron {
   color: white;
   background-color: rgb(0, 139, 137);
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .img-thumbnail {
@@ -264,6 +270,14 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
 
 .sheet-info h5 {
   margin-top: 5px;
+}
+
+.music-info {
+  color: rgb(0, 111, 139);
+}
+
+.music-info button {
+  margin: 10px 0px;
 }
 
 a:link {

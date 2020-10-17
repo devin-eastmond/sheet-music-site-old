@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css" />
+  <title>Eastmond Music</title>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html">Eastmond Music</a></h1>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html"><img src="images/pianoIcon.png" class="logo"></a>
+    <div class="navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="browseMusic.html">Browse Music</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Genres
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="browseMusic.html?genre=movie-music">Movie Music</a>
+            <a class="dropdown-item" href="browseMusic.html?genre=video-game-soundtracks">Video Game Soundtracks</a>
+            <a class="dropdown-item" href="browseMusic.html?genre=religious-music">Religious Music</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Difficulty Levels
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="browseMusic.html?difficulty=easy">Easy</a>
+            <a class="dropdown-item" href="browseMusic.html?difficulty=intermediate">Intermediate</a>
+            <a class="dropdown-item" href="browseMusic.html?difficulty=advanced">Advanced</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" id="searchInput" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" id="submitSearch" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <!-- NAVBAR END -->
+
+  <div class="jumbotron">
+    <h1>View Song</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+
+      <figure class="col-md-4">
+        <div class="song movie-music advanced">
+          <a href="images/Avatar__The_Last_Airbender_Medley.pdf" id="pdfLink" data-size="1600x1067">
+            <div class="sheet-info">
+              <img alt="picture" src="images/Avatar__The_Last_Airbender_Medley.jpg" id="imagePreview" class="img-thumbnail">
+            </div>
+          </a>
+        </div>
+      </figure>
+      <figure class="col-md-4">
+        <div class="music-info">
+        <h5 class="song-name">Avatar: The Last Airbender Medley</h5>
+        <p>Advanced Piano</p>
+        <p class="composer-name">Composed by Jeremy Zuckerman</p>
+        <div>
+          <button type="button" id="playButton" class="btn btn-info btn-md" onclick="playSong()">
+            <audio id="myAudio">
+              <source src="audio/Avatar__The_Last_Airbender_Medley.mp3" id="audioSource" type="audio/mpeg">
+            </audio>
+            <span id="buttonText">Play Song</span>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-headphones" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M8 3a5 5 0 0 0-5 5v4.5H2V8a6 6 0 1 1 12 0v4.5h-1V8a5 5 0 0 0-5-5z" />
+              <path d="M11 10a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3zm-6 0a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-3z" />
+            </svg>
+          </button>
+        </div>
+
+        <div>
+          <button type="button" id="downloadButton" class="btn btn-info btn-md" onclick="downloadPDF()">
+            <span id="buttonText">Download PDF</span>
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+              <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+            </svg>
+            <a href="images/Avatar__The_Last_Airbender_Medley.pdf" download id="download" hidden></a>
+          </button>
+        </div>
+      </div>
+      </figure>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <span>Click <a class="btn-link" href="https://github.com/devinator9876/sheet-music-site.git" target="_blank">here</a> to visit my GitHub page</span>
+    </div>
+  </footer>
+  <script src="scripts/navbar.js"></script>
+  <script src="scripts/viewSong.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+  <script>
+    const $dropdown = $(".dropdown");
+    const $dropdownToggle = $(".dropdown-toggle");
+    const $dropdownMenu = $(".dropdown-menu");
+    const showClass = "show";
+
+    $(window).on("load resize", function() {
+      if (this.matchMedia("(min-width: 768px)").matches) {
+        $dropdown.hover(
+          function() {
+            const $this = $(this);
+            $this.addClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "true");
+            $this.find($dropdownMenu).addClass(showClass);
+          },
+          function() {
+            const $this = $(this);
+            $this.removeClass(showClass);
+            $this.find($dropdownToggle).attr("aria-expanded", "false");
+            $this.find($dropdownMenu).removeClass(showClass);
+          }
+        );
+      } else {
+        $dropdown.off("mouseenter mouseleave");
+      }
+    });
+  </script>
+</body>
+
+</html>
