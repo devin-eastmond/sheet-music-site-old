@@ -17,16 +17,41 @@ function loadSongInfo(song) {
 
     for (let i = 0; i < songs.length; i++) {
       if (songs[i].class == song) {
-        console.log(songs[i]);
         document.getElementById("songName").innerHTML = songs[i].name;
         if (songs[i].source != "")
           document.getElementById("source").innerHTML = "from <i>" + songs[i].source + "</i>";
         document.getElementById("difficulty").innerHTML = songs[i].difficulty + " Piano";
         document.getElementById("composerName").innerHTML = "Composed by " + songs[i].composer;
+        loadSimilarSongInfo(songs[i].name);
         break;
       }
     }
   }
+}
+
+function loadSimilarSongInfo(song) {
+  let endpoint = "http://ws.audioscrobbler.com";
+  let apiKey = "14e2c020fce6ea8d9a2fecc25f6f7ae6";
+  let url = endpoint + "/2.0/?method=track.search&track=" + song + "&api_key=" + apiKey + "&format=json&limit=3";
+  fetch(url)
+    .then(function(response) {
+      return response.json();
+    }).then(function(json) {
+      console.log(json);
+
+
+      for (let i = 0; i < 3; i++) {
+        let imageLink = json.results.trackmatches.track[i].image[2]["#text"];
+        document.getElementById("moreLink"+(i+1)).href = json.results.trackmatches.track[i].url;
+        if (imageLink == "") {
+          document.getElementById("moreImage"+(i+1)).src = "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png";
+        } else {
+          document.getElementById("moreImage"+(i+1)).src = imageLink;
+        }
+        document.getElementById("moreTitle"+(i+1)).innerHTML = json.results.trackmatches.track[i].name;
+        document.getElementById("moreArtist"+(i+1)).innerHTML = "Artist: " + json.results.trackmatches.track[i].artist;
+      }
+    });
 }
 
 function playSong() {
@@ -69,7 +94,7 @@ let songs = [
   },
   {
     "class": "Harry_and_Hermione",
-    "name": "Harry &amp; Hermione",
+    "name": "Harry and Hermione",
     "difficulty": "Easy",
     "composer": "Nicholas Hooper",
     "source": "Harry Potter and the Half Blood Prince"

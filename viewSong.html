@@ -79,38 +79,71 @@
           </a>
         </div>
       </figure>
-      <figure class="col-md-4">
+      <figure class="col-md-8">
         <div class="music-info">
-        <h5 id="songName"></h5>
-        <p id="source"></p>
-        <p id="difficulty"></p>
-        <p id="composerName"></p>
-        <div>
-          <button type="button" id="playButton" class="btn btn-info btn-md" onclick="playSong()">
-            <audio id="myAudio">
-              <source src="" id="audioSource" type="audio/mpeg">
-            </audio>
-            <span id="buttonText">Play Song</span>
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-headphones" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 3a5 5 0 0 0-5 5v4.5H2V8a6 6 0 1 1 12 0v4.5h-1V8a5 5 0 0 0-5-5z" />
-              <path d="M11 10a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3zm-6 0a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-3z" />
-            </svg>
-          </button>
-        </div>
+          <h5 id="songName"></h5>
+          <p id="source"></p>
+          <p id="difficulty"></p>
+          <p id="composerName"></p>
+          <div>
+            <button type="button" id="playButton" class="btn btn-info btn-md" onclick="playSong()">
+              <audio id="myAudio">
+                <source src="" id="audioSource" type="audio/mpeg">
+              </audio>
+              <span id="buttonText">Play Song</span>
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-headphones" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 3a5 5 0 0 0-5 5v4.5H2V8a6 6 0 1 1 12 0v4.5h-1V8a5 5 0 0 0-5-5z" />
+                <path d="M11 10a1 1 0 0 1 1-1h2v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-3zm-6 0a1 1 0 0 0-1-1H2v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-3z" />
+              </svg>
+            </button>
+          </div>
 
-        <div>
-          <button type="button" id="downloadButton" class="btn btn-info btn-md" onclick="downloadPDF()">
-            <span id="buttonText">Download PDF</span>
-            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
-              <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-            </svg>
-            <a href="images/Avatar__The_Last_Airbender_Medley.pdf" download id="download" hidden></a>
-          </button>
+          <div>
+            <button type="button" id="downloadButton" class="btn btn-info btn-md" onclick="downloadPDF()">
+              <span id="buttonText">Download PDF</span>
+              <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-download" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
+                <path fill-rule="evenodd" d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+              </svg>
+              <a href="images/Avatar__The_Last_Airbender_Medley.pdf" download id="download" hidden></a>
+            </button>
+          </div>
         </div>
-      </div>
       </figure>
 
+    </div>
+  </div>
+
+  <div class="rectangle rectangle-blue">
+    <h2>More like this</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="album">
+          <a id="moreLink1">
+            <img id="moreImage1">
+            <h4 id="moreTitle1"></h4>
+            <p id="moreArtist1"></p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="album">
+          <a id="moreLink2">
+            <img id="moreImage2">
+            <h4 id="moreTitle2"></h4>
+            <p id="moreArtist2"></p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="album">
+          <a id="moreLink3">
+            <img id="moreImage3">
+            <h4 id="moreTitle3"></h4>
+            <p id="moreArtist3"></p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 

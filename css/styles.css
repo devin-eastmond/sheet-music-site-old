@@ -191,8 +191,27 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
   background-color: rgb(0, 139, 137);
 }
 
-.rectangle-blue h2, .rectangle-blue h3 {
+.rectangle-blue h2, .rectangle-blue h3, .rectangle-blue h4 {
   color: white;
+}
+
+.rectangle-blue img {
+  padding-bottom: 20px;
+}
+
+.rectangle-blue p {
+  color: white;
+}
+
+.album {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.album:hover {
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .rectangle-blue button {
