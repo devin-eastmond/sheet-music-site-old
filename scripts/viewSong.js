@@ -15,8 +15,13 @@ function loadSongInfo(song) {
     document.getElementById("myAudio").load();
     document.getElementById("download").href = "images/" + song + ".pdf";
 
-    var songInfoJson = JSON.parse("http://deastmond.com/sheet-music-site/songsInfo.json");
-    console.log(songInfoJson);
+    const url = "http://deastmond.com/sheet-music-site/songsInfo.json";
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      }).then(function(json) {
+        console.log(json);
+      });
   }
 }
 
