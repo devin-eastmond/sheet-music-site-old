@@ -183,7 +183,7 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
 
 }
 
-.rectangle-white h2, .rectangle-white h3 {
+.rectangle-white h2, .rectangle-white h3, .rectangle-white h4 {
   color: rgb(0, 111, 139);
 }
 
@@ -203,6 +203,24 @@ a#navbarDropdown.nav-link.dropdown-toggle:focus {
 .rectangle-blue button:hover {
   background-color: rgb(212, 249, 255);
   color: rgb(0, 139, 137);
+}
+
+.form-block {
+  padding: 0px 40px;
+}
+
+.form-block select {
+  margin-top: 5px;
+  margin-bottom: 30px;
+  max-width: 250px;
+}
+
+.form-block h2 {
+  margin-bottom: 30px;
+}
+
+.form-block button {
+  margin: 35px 0;
 }
 
 .footer {
